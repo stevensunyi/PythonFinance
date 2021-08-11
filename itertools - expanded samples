@@ -1,0 +1,32 @@
+import itertools
+
+def foo(mylist):
+    list_of_lists = [mylist[i:i+5] for i in range(0, len(mylist),7)]
+    print(list_of_lists)
+    #return list(itertools.chain.from_iterable(list_of_lists))
+    
+foo(range(1,101))
+#retults
+#[range(1, 6), range(8, 13), range(15, 20), range(22, 27), range(29, 34), range(36, 41), range(43, 48), range(50, 55), range(57, 62), range(64, 69), range(71, 76), range(78, 83), range(85, 90), range(92, 97), range(99, 101)]
+
+#lit = ['1a','2b','3c','4d','5e','6f','7g','8h','9i','10j','11k','12l','13m','14n','15o','16p','17q','18r','19s','20t']
+#lit = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+foo(lit)
+#results
+#[['1a', '2b', '3c', '4d', '5e'], ['8h', '9i', '10j', '11k', '12l'], ['15o', '16p', '17q', '18r', '19s']]
+
+#mylist = range(1,101)
+mylist = lit
+list_of_lists = [mylist[i:i+5] for i in range(0, len(mylist),7)]
+print((list_of_lists))
+#results: return the list of lists
+#[['1a', '2b', '3c', '4d', '5e'], ['8h', '9i', '10j', '11k', '12l'], ['15o', '16p', '17q', '18r', '19s']]
+
+print(list(itertools.chain.from_iterable(list_of_lists)))
+#results: return a list
+#['1a', '2b', '3c', '4d', '5e', '8h', '9i', '10j', '11k', '12l', '15o', '16p', '17q', '18r', '19s']
+
+print(itertools.chain.from_iterable(list_of_lists))
+#results - return the address of an object
+#<itertools.chain object at 0x0000025B30085A30>
