@@ -1,0 +1,4 @@
+import random
+def foo():
+    return [random.randint(1,10) for i in range(1000)]
+#output: a list of 1000 random integers from 1 to 10
