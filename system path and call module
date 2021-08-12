@@ -1,0 +1,22 @@
+import sys
+
+#display the default file path that can be used to store modules
+sys.path
+
+# output
+# C:\\Users\\',
+# 'C:\\ProgramData\\Anaconda3\\python38.zip',
+# 'C:\\ProgramData\\Anaconda3\\DLLs',
+# 'C:\\ProgramData\\Anaconda3\\lib',
+# 'C:\\ProgramData\\Anaconda3',
+# '',
+# 'C:\\Users\\Sunfintek\\AppData\\Roaming\\Python\\Python38\\site-packages',
+# 'C:\\ProgramData\\Anaconda3\\lib\\site-packages',
+# 'C:\\ProgramData\\Anaconda3\\lib\\site-packages\\locket-0.2.1-py3.8.egg',
+# 'C:\\ProgramData\\Anaconda3\\lib\\site-packages\\win32',
+# 'C:\\ProgramData\\Anaconda3\\lib\\site-packages\\win32\\lib',
+# 'C:\\ProgramData\\Anaconda3\\lib\\site-packages\\Pythonwin',
+# 'C:\\ProgramData\\Anaconda3\\lib\\site-packages\\IPython\\extensions',
+# 'C:\\Users\\.......\\.ipython']
+
+# can import any *.py file saved under these file path. 
