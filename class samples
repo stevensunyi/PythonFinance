@@ -1,0 +1,68 @@
+class Trail():
+    #intialize the class
+    def __init__ (self, dest, len):
+        self.dest = dest
+        self.len = len
+
+    #define method
+    def describe_trail(self):
+        print (f'Destination:{self.dest}')
+        desc = f'This trail goes to {self.dest}.'
+        if self.len: 
+            desc += f'\nThis Trail is {self.len}km.'
+        print(desc)
+
+    #define the 2nd method
+    def  run_trail(self):
+        print (f'Running to {self.dest}.')
+        
+#add the first instance
+verst = Trail("Mt. Verstovia", 4) 
+verst.describe_trail()
+verst.run_trail()
+
+#output: 
+#Destination:Mt. Verstovia
+#This trail goes to Mt. Verstovia.
+#This Trail is 4km.
+#Running to Mt. Verstovia.
+
+#add the second instance
+ms = Trail("Middle Sister", 10)
+ms.describe_trail()
+ms.run_trail()
+
+#output
+#Destination:Middle Sister
+#This trail goes to Middle Sister.
+#This Trail is 10km.
+#Running to Middle Sister.
+
+#inheritance super() is used to call the parent class
+class BikeTrail(Trail):
+    def __init__ (self, dest, len):
+        super().__init__(dest,len)
+        # cild class can define additional attributes particular to itself. 
+        self.paved = True
+        self.bikes_only = True
+    
+    # A child class can define its own methods, giving it specific behavior the parent class lacks.
+    def ride_trail(self):
+        print(f'Riding to {self.dest}.')
+    
+    #overriding parent class 
+    # a child class can customize the behavior of parent class methods by using super() to access those methods
+    def run_trail(self):
+        if self.bikes_only:
+            print("You cannot run this trail!")
+        else: 
+            super().run_trail()
+      
+
+cross_trail = BikeTrail("Harbor Mountain", 6)
+cross_trail.ride_trail()
+cross_trail.run_trail()
+
+#output
+#Riding to Harbor Mountain.
+#You cannot run this trail!
