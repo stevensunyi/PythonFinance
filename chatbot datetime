@@ -1,0 +1,19 @@
+import datetime
+
+vocabulary = {
+    "hello" : "Hi there!",
+    "what's your name" : "My name is Roboto!",
+    "what is your name" : "My name is Roboto!",
+    "bye" : "Goodbye!"
+}
+
+def talk(query, vocabulary):
+    if query in vocabulary: 
+        return vocabulary[query]
+    elif query == 'what time is it':
+        return datetime.datetime.now().strftime('%H:%M')
+    else: 
+        return "I don't understand that!"
+
+talk('what time is it', vocabulary)
+#results: '09:55'
