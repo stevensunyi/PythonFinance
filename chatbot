@@ -1,0 +1,13 @@
+vocabulary = {
+    "hello" : "Hi there!",
+    "what's your name" : "My name is Roboto!",
+    "what is your name" : "My name is Roboto!",
+    "bye" : "Goodbye!"
+}
+
+def talk(query, vocabulary):
+    if query in vocabulary: 
+        return vocabulary[query]
+
+foo("what's your name", vocabulary)
+#results: 'My name is Roboto!'
