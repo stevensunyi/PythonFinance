@@ -1,0 +1,11 @@
+data = input ('Say something:')
+#Say something:Hi there!
+
+with open ('data.txt', 'w') as file:
+    file.write(data)
+
+with open('data.txt', 'r') as file:
+    content = file.read()
+
+content
+#'Hi there!'
