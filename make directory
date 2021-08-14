@@ -1,0 +1,6 @@
+import os
+
+for i in range(1, 51):
+    os.makedirs(str('Consol')+str(i),exist_ok=True)  
+    
+help(os.makedirs)
