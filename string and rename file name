@@ -1,0 +1,9 @@
+import glob
+import os
+
+text_files = glob.glob("file*.txt")
+print(text_files)
+for text_file in text_files:
+    # type(text_file) is list
+    # text_file is a string "file-.txt"
+    os.rename(text_file, text_file[:4] + "-" + text_file[4:])
