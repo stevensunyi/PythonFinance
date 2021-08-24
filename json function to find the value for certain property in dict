@@ -1,0 +1,5 @@
+import json
+
+def foo(metal, property, filepath):
+    data = json.load(open(filepath))
+    return data['metals'][metal][property]
