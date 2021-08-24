@@ -1,0 +1,5 @@
+import json
+data = json.load(open('file2.txt'))
+print({key:float(value)*2 for key,value in data.items()})
+
+#new dictionary = value * two
